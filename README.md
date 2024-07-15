@@ -1,6 +1,6 @@
 # WebStandardsUOC
 Bachelor's Degree in Techniques for Software Development at <a href="https://github.com/UOC/">UOC</a>.\
-Practices for the Web Standards course.
+Practices for the Web Standards and Languages course.
 
 ### Continuous Assessment Activities:
 - <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/juanmafe/WebStandardsUOC/main/CAA1/index.html">CAA 1</a>
