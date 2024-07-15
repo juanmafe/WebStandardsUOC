@@ -1,0 +1,269 @@
+/*
+########## COMMONS INDEX ###########
+*/
+/*
+Affect the h1 tag and sets an extra font size.
+*/
+h1 {
+    font-size: 90px;
+}
+
+#experiences, #latestblog, #unlockingcreativity, #aboutme, #myhelpteam {
+    padding-top: 5em;
+    padding-bottom: 2em;
+}
+
+/*
+It arranges its internal elements horizontally and distributes the space between them evenly.
+*/
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+########## EXPERIENCES SECTION ##########
+*/
+#experiences-red-title {
+    font-size: 50px;
+}
+
+#experiences-black-title {
+    font-size: 30px;
+}
+
+/*
+It represents a gallery div with centered text and a small outer margin,
+while its inner images occupy the full available width,
+have rounded edges and their changes animate smoothly within 0.2 seconds.
+*/
+.exp-gallery-item {
+    text-align: center;
+    margin: 0.5em;
+}
+
+.exp-gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+/*
+It represents a div with an image where, when hovering over it,
+both the internal images and the overlay (the gray layer above it) are enlarged and become fully visible,
+and the fontawesome icon inside the overlay is displayed.
+*/
+.exp-gallery-item-img {
+    position: relative;
+}
+
+.exp-gallery-item-img:hover img {
+    transform: scale(1.05);
+}
+
+.exp-gallery-item-img:hover .img-overlay {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.exp-gallery-item-img:hover .img-overlay i {
+    display: block;
+}
+
+/*
+########## LATEST BLOG SECTION ##########
+*/
+/*
+Apply a two-column grid layout with equal spacing between columns and a bottom padding of 2em
+using grid instead of flexbox for the title, as the instructions indicated that at least one section should be in each of the styles.
+*/
+#latestblog-title {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding-bottom: 2em;
+}
+
+/*
+Apply an automatically sized two-column grid layout for each item
+using grid instead of flexbox for the content, as the instructions indicated that at least one section should be in each of the styles.
+*/
+.latestblog-content-item {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.latestblog-content-item-text {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.latestblog-content-item-image img {
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+/*
+The separating line of each element of the content block.
+*/
+.latestblog-content-separator {
+    height: 0.2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #ffffff;
+}
+
+.latestblog-read-more {
+    font-size: 20px;
+}
+
+/*
+########## ABOUT ME SECTION ##########
+*/
+/*
+Arranges its internal elements horizontally, evenly distributes the space between them and has a top padding space of 2em.
+*/
+#aboutme-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+#aboutme-content h3 {
+    color: #000000;
+}
+
+#aboutme-black-title, #aboutme-content-title {
+    font-size: 30px;
+    margin: 0;
+}
+
+/*
+Images within the aboutme section, which will have an outer margin of 1em,
+will adopt a circular shape and will have a diffuse, semi-transparent black shadow.
+*/
+#aboutme-image img {
+    margin: 1em;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+}
+
+/*
+########## MY TEAM SECTION ##########
+*/
+/*
+Internal images occupy 100% of the width with the images showing
+rounded edges and a diffuse, semi-transparent black shadow.
+*/
+.team-gallery-item {
+    width: 100%;
+}
+
+.team-gallery-item img {
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+}
+
+.team-gallery-item-img {
+    margin: 1em;
+}
+
+/*
+########## MOBILES AND TABLETS SECTION ##########
+*/
+/*
+What follows this media query will affect screens with a minimum width of 768px and a maximum width of 993px, i.e. tablets.
+*/
+@media screen and (min-width: 768px) and (max-width: 993px) {
+
+    /*
+    Allow internal images to move to the next line if space is limited and distribute the space around them evenly.
+    */
+    .gallery {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /*
+    Allows a base width equal to half the container minus 1em, providing a responsive structure.
+    This way, we get two elements per row in the tablet version.
+    */
+    .exp-gallery-item, .team-gallery-item {
+        flex: 0 0 calc(50% - 1em);
+    }
+
+    /*
+    In this way, the read more is not split in two to simulate as much as possible the captures.
+    */
+    .latestblog-read-more {
+        display: block;
+    }
+
+}
+
+/*
+What follows this media query will affect screens with a maximum width of 768px, i.e. mobiles.
+*/
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    /*
+    Arrange their internal elements (images) in a vertical direction, i.e., one below the other.
+    */
+    .gallery, #aboutme-content {
+        flex-direction: column;
+    }
+
+    /*
+    Allows the title in mobile mode to appear together (as shown in the screenshot).
+    */
+    #experiences .line {
+        display: inline;
+    }
+
+    /*
+    Apply a single-column grid layout and center the title horizontally.
+    */
+    #latestblog-title {
+        grid-template-columns: 1fr;
+        text-align: center;  
+    }
+
+    /*
+    Applies a grid layout of two identical columns.
+    */
+    .latestblog-content-item {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*
+    In this way, the read more is not split in two to simulate as much as possible the captures.
+    */
+    .latestblog-read-more {
+        display: block;
+    }
+
+    /*
+    In order for the aboutme image not to appear below the text in the mobile version,
+    the order is reversed so that the image appears above the text.
+    */
+    #aboutme-image {
+        order: -1; 
+    }
+
+    /*
+    To make the aboutme image appear with the full width of the web page in the mobile version,
+    set the width to 100% and remove the margins.
+    */
+    #aboutme-image img {
+        margin: 0em;
+        width: 100%;
+    }
+
+}

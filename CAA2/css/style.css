@@ -1,0 +1,291 @@
+/*
+These properties affects to the body tag and set the background color to #EBEBFF and keep the content centered.
+In this case, it affects the container div which is the child element of the body.
+*/
+body {
+    background-color: #EBEBFF;
+    justify-content: center;
+}
+
+/*
+These properties affect the whole header tag and set the font color to white, font shadow,
+center alignment and set a background image which fits with the page width.
+*/
+header {
+    background-image: url("../images/cabecera.jpg");
+    background-size: cover;
+    padding: 1%;
+    text-align: center;
+    font-family: Varela Round;
+    color: white;
+    text-shadow: 2px 2px 3px black; 
+}
+
+/*
+These properties affect the h1 tag and sets padding and extra font size to maintain centered.
+*/
+h1 {
+    font-size: 300%;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+/*
+Sets some commons global properties like Arvo font and the content adjustment.
+*/
+main {
+    font-family: Arvo;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+Set the settings for the menu, to remove the unordered list point,
+the mouse-over color change and to scroll a little to the right.
+*/
+nav {
+    width: 20%;
+    font-style: italic;
+    background: #ffffff;
+    text-align: left;
+    border-right: thin solid #94BDD6;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-bottom: 6%;
+}
+
+nav a {
+    color: #666;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #94BDD6;
+    padding-left: 2%;
+}
+
+/*
+These properties affect the elements containing the page-continer style (in this case only the main div inside the body),
+which sets a width of 1200px and the shadow as close as I could imitate from the png image.
+*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
+}
+
+/*
+set the configuration for the information and news section on the right side menu.
+*/
+.information, .news {
+    width: 80%;
+    background: #ffffff;
+    padding: 5%;
+}
+
+.information-section-separator {
+    border: 1px solid #94BDD6;
+    margin-top: -3%;
+}
+
+/*
+set the configuration for the information and news section on the right side menu.
+There is nothing interesting except the shading on the images.
+*/
+#information-section-one, #news-section-one {
+    margin-top: -5%;
+    padding: 2%;
+    text-align: center;
+    background-image: linear-gradient(#94BDD6, #EBF7FF);
+}
+
+#information-section-one p {
+    font-size: 20px;
+}
+
+/*
+Changes the default icon of the unordered list to an image
+*/
+#information-section-two ul {
+    list-style-image: url('../images/list-icon.png');
+    font-size: 24px;
+}
+
+.information-block {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.information-title {
+    font-size: 16px;
+    background-color: #94BDD6;
+    padding-top: 0.05%;
+    padding-bottom: 0.05%;
+    padding-left: 3%;
+    position:relative;
+    z-index:2;
+}
+
+.information-content {
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 8px;
+    border-bottom: thick solid #94BDD6;
+}
+
+/*
+Creates the rounded margins of the images in the news section.
+*/
+.news-rounded {
+    border-radius: 2em 1em 0 0;
+}
+
+.news-block {
+    margin-top: 6%;
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 8px;
+    border: thin solid #000000;
+}
+
+.news-title {
+    font-size: 16px;
+    text-align: center;
+    background-color: #94BDD6;
+    padding-top: 0.05%;
+    padding-bottom: 0.05%;
+    padding-left: 3%;
+    position:relative;
+}
+
+.news-section-separator {
+    margin-top: 16%;
+}
+
+.image-caption img {
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin: auto;
+    margin: 4%;
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 8px;
+    border-radius: 50%;
+}
+
+.image-caption figcaption {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 4%;
+}
+
+.quote {
+    color: #94BDD6;
+    background-color: #EBF7FF;
+    border-left: thick solid #94BDD6;
+}
+
+.quote p {
+    padding-left: 2%;
+}
+
+.quote figcaption {
+    text-align: right;
+    font-style: italic;
+    margin-right: 4%;
+}
+
+.information-quote-symbol {
+    font-size: 60px;
+}
+
+.information-quote-text{
+    font-size: 16px;
+    padding-left: 5%;
+}
+
+.who-hacte-box {
+    padding-top: 3%;
+    height: 25%;
+    display: flex;
+    gap: 2%;
+    object-fit: fill;
+ }
+
+.who-hacte {
+    border: thin solid #bdbdbd;
+    width: 25%;
+  }
+
+.who-hacte img {
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin: auto;
+ }
+
+ .who-hacte p {
+    color: #ffffff;
+    background-color: #133cf3;
+    text-align: center;
+    font-style: italic;
+ }
+
+/*
+These properties affect the footer tag and set the background color to #94BDD6,
+Flex as font family, center align font size 14 and 1% padding.
+*/
+footer {
+    display: flex;
+    font-family: Arvo;
+    font-size: 14px;
+    background: #94BDD6;
+    padding: 1%;
+    text-align: center;
+}
+
+/*
+These properties affect a links included in the footer tag and set the font color to #ffffff,
+font sytle to italic, and remove all decorations to remove the underline.
+*/
+footer a {
+    color: #ffffff;
+    font-style: italic;
+    text-decoration: none;
+}
+
+/*
+These properties affect the footer with the entities on the left,
+especially for the alignment of the texts.
+*/
+.footer-left {
+    color: #ffffff;
+    width: 50%;
+    text-align: right;
+    padding-right: 1%;
+}
+
+/*
+These properties affect the footer with the entities on the right,
+especially for the alignment of the texts.
+*/
+.footer-right {
+    color: #ffffff;
+    width: 50%;
+    text-align: left;
+    padding-left: 1%;
+}
+
+/*
+The following style modify only the elements that contain the separator style,
+in this case they are divs (vertical lines) with width (to give it thickness)
+and white background colour.
+*/
+.footer-separator {
+    width: 0.2%;
+    background-color: #ffffff;
+}

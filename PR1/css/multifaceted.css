@@ -1,0 +1,168 @@
+/*
+########## COMMONS MULTIFACETED ###########
+*/
+/*
+Affect the h1 tag and sets an extra font size.
+*/
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+/*
+########## ASPECTS SECTION ###########
+*/
+#multifaceted-aspects {
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+/*
+########## DESIGN LIGHT COLOR SECTION ###########
+*/
+#design-light-color {
+    padding-top: 1em;
+    padding-bottom: 5em;
+}
+
+#design-light-color h3 {
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 1em;
+}
+
+/*
+Styles the table by giving it a 1em top padding, 3em bottom padding,
+100% width, fixed table layout (allowing all cells to have the same width),
+collapsed borders and center-aligned text.
+*/
+.responsive-table {
+    padding-top: 1em;
+    padding-bottom: 3em;
+    width: 100%;
+    table-layout: fixed;  
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/*
+Applies a background color to the even rows of the table.
+*/
+.responsive-table tr:nth-child(even) { 
+    background-color: #e4e4e4;
+}
+
+/*
+Styles the first row of headers in the table, giving it a border and background color of #C43721,
+a white text color, and a top and bottom padding of 0.8em.
+*/
+.responsive-table tr:first-child th {
+    border: 1px solid #C43721;
+    background-color: #C43721;
+    color: white;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+}
+
+/*
+Applies to the table cells providing them with a 1px black border and a padding around 1em.
+*/
+.responsive-table td {
+    border: 1px solid #000000;
+    padding: 1em;
+}
+
+/*
+Styles the first cell of each row of the table, i.e. the first column (removing the header cell),
+assigning it a background color and a left border #ffd6d1, left text alignment and a left padding of 2em.
+*/
+.responsive-table td:first-child {
+    background-color: #ffd6d1;
+    border-left: 1px solid #ffd6d1;
+    text-align: left;
+    padding-left: 2em;
+}
+
+/*
+########## MOBILES AND TABLETS SECTION ##########
+*/
+/*
+What follows this media query will affect screens with a maximum width of 768px, i.e. mobiles.
+*/
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #design-light-color h3 {
+        padding-bottom: 0em;
+    }
+
+    /*
+    Restore the white background color to the even rows of the table.
+    */
+    .responsive-table tr:nth-child(even) { 
+        background-color: #ffffff;
+    }
+
+    /*
+    Applies to the table cells by removing any padding they have, and setting them as elements arranged in a column.
+    */
+    .responsive-table td {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*
+    Makes the table header invisible
+    */
+    .responsive-table th {
+        display: none;
+    }
+
+    /*
+    Styles the first column (except the header cell) of the table,
+    assigning it a 1px black border, center text alignment,
+    2em top margin, zero padding and 1.4em top padding.
+    */
+    .responsive-table td:first-child {
+        border: 1px solid #000000;
+        text-align: center;
+        margin-top: 2em;
+        padding: 0;
+        padding-top: 1.4em;
+    }
+
+     /*
+     Adds the content of the data-label using the pseudo-element (:before) before each cell with values,
+     with a background color #C43721, bold and capitalized text, no padding and white text color.
+     With this we get to enter the values of Design, Light and Color as shown in the screenshot.
+     */
+    .responsive-table td::before {
+        content: attr(data-label);
+        background-color: #C43721;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0;
+        color: #ffffff;
+    }
+
+     /* 
+     Adds an empty line using the pseudo-element (:after) after including the cell contents in the column.
+     This is done to simulate the blank space at the bottom of each cell in the mobile capture.
+     */
+    .responsive-table td::after {
+        content: "\A";
+        white-space: pre;
+    }
+
+}

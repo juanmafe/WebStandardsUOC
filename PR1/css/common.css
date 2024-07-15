@@ -1,0 +1,597 @@
+/*
+########## COMMONS GLOBAL ###########
+*/
+/*
+First, they should never exceed 1170 pixels in width, no matter how large the screen is. Second, they must be centered on the page, providing equal spacing on both sides.
+As for the text within these elements, it is specified that the font Nunito Sans must be used and that it must be 16 pixels in size.
+*/
+.container {
+    max-width: 1170px;
+    margin: auto;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/*
+It tells the browser that any element must occupy the entire available width of its parent container.
+Practically, it makes the element stretch to fill the full width of its container.
+*/
+.full-width {
+    width: 100%;
+}
+
+a {
+    color:#C43721;
+}
+
+/*
+These properties affect the h1, h2 and h3 tag and sets an extra simple configuration.
+*/
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: Yellowtail;
+}
+
+h2 {
+    color: #C43721;
+    font-size: 40px;
+}
+
+h3 {
+    color: #C43721;
+    font-size: 25px;
+}
+
+/*
+Colours.
+*/
+.full-width-gray {
+    background-color: #e4e4e4;
+}
+
+.full-width-black {
+    background-color: #000000;
+}
+
+.white-colored {
+    color: #ffffff;
+}
+
+.red-colored {
+    color: #C43721;
+}
+
+.red-bright-colored {
+    color: #ff0000;
+}
+
+.black-colored {
+    color: #000000;
+}
+
+/*
+Ensures that each element with the line class occupies its own line and prevents
+other elements from being displayed next to it on the same line.
+*/
+.line {
+    display: block;
+}
+
+/*
+Converts the links into red buttons with white background, centered and with a smooth transition effect when any change is applied to them.
+*/
+.red-button a {
+    font-size: 14px;
+    color: #C43721;
+    display: block;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0.75em 1.75em;
+    text-decoration: none;
+    border: 0.1em solid #C43721;
+    border-radius: 0.25em;
+    margin-right: 0.3em;
+    margin-left: 0.3em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    transition: all 0.3s;
+}
+
+/*
+Causes links items and focused links in general to change to white text on a red background when interacted with.
+*/
+.red-button a:hover, .red-button a:focus {
+    color:#ffffff;
+    background-color: #ef6d58;
+}
+
+/*
+It represents a semi-transparent, rounded div that completely covers the width and almost
+the entire height of the image, initially invisible, but when displayed,
+a + symbol imported from fontawesome is centered and displayed with a large white font size.
+*/
+.img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    top: 0;
+    left: 0;
+    background-color: rgba(132, 131, 131, 0.5);
+    opacity: 0;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+.img-overlay i {
+    display: none;
+}
+
+/*
+########## HEADER MENU ###########
+*/
+/*
+Creates a flexible, centered header that will adhere to the top of the page when scrolling and will have a semi-transparent white background.
+The z-index at 100 is used so that the menu is not obscured by image effects.
+*/
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 0.1em solid #C43721;
+}
+
+header img {
+    width: 3em;
+}
+
+/*
+Makes its child elements to be placed in a row, vertically centered, with equal spacing between them, starting from the beginning to the end.
+*/
+#header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+The mobile mode svg is instructed to be hidden and not displayed. Subsequently by means of the @media, we change the display so that it appears.
+*/
+#menu #bars {
+    display: none;
+}
+
+/*
+Initially, it is configured not to display the collapsed menu buttom. It is also assigned a padding of 1em, which provides a space between the content of the element and its borders.
+Finally, it sets the cursor as a pointer when the user hovers over this buttom, indicating that it is interactive.
+*/
+#menu .menu-collapsed {
+    display: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+/*
+Converts the unordered list within the menu into a single row of list items with no bullets and no extra space around them.
+*/
+.red-button ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/*
+Esta pintando el texto del boton del menu de blanco y dando a ese mismo elemento un fondo de color rojo.
+*/
+#selected-menu {
+    color:#ffffff;
+    background-color: #C43721;
+}
+
+/*
+########## BANNERS ###########
+*/
+/*
+Transforms the banner container into a container with a fixed height that displays a background image covering
+the entire area of the container, and any internal elements will be centered horizontally.
+*/
+.full-width-banner {
+    background-image: url('../img/common/header.jpg');
+    height: 30em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+Converts the banner to a centered text block, with white text color, 4em side padding, a semi-transparent white background,]
+rounded edges and a top margin.
+*/
+#banner {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    padding-left: 4em;
+    padding-right: 4em;
+    background-color: rgba(103, 103, 103, 0.5);
+    border-radius: 1em;
+    margin-top: 2em;
+}
+
+/*
+Transforms the subbanner container into a container with a fixed height that displays a background image covering
+the entire area of the container, and any internal elements will be centered horizontally.
+*/
+.full-width-subbanner {
+    background-image: url('../img/common/inner_header.jpg');
+    height: 10em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+Converts the subbanner to a centered text block, with white text color, 4em side padding, a semi-transparent white background,]
+rounded edges and a top margin.
+*/
+#subbanner {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: rgba(103, 103, 103, 0.5);
+    border-radius: 1em;
+}
+
+/*
+########## FOOTER ###########
+*/
+/*
+Applies a text color of light gray, a background color of dark gray and a bottom padding of 4em to the footer element.
+*/
+footer {
+    color: #C1C2C4;
+    background-color: #323639;
+    padding-bottom: 4em;
+}
+
+/*
+Sets the div as a flexible container in column direction, aligns its elements to stretch across the entire div.
+*/
+#footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*
+The separating line of each element of the content block.
+*/
+.footer-content-separator {
+    height: 0.2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #C1C2C4;
+}
+
+/*
+Applies flexible behavior in row direction, where its child elements are distributed evenly.
+In addition, it allows for responsive layout, and adds a 1em padding around it.
+*/
+.footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1em;
+}
+
+/*
+Allow elements to grow and shrink as needed (with a base of 1), and add a 1em padding around it.
+*/
+.footer-section-info {
+    flex: 1;
+    padding: 1em;
+}
+
+.footer-section-info-title {
+    font-size: 18px;
+}
+
+/*
+Applies a light gray background color, 0.3em padding, 0.3em margin,
+100% width, centered text alignment, dark gray text color,
+and a transition on all properties along 0.3s, to all links within footer-section-info-social-media.
+*/
+#footer-section-info-social-media a {
+    background-color: #e4e4e4;
+    padding: 0.3em;
+    margin: 0.3em;
+    width: 100%;
+    text-align: center;
+    color: #323639;
+    transition: all 0.3s;
+}
+
+/*
+Specific colors for social network hovers.
+*/
+#footer-section-info-social-media a[href="https://dribbble.com/"]:hover {
+    background-color: #EA4C89;
+    color:#ffffff;
+}
+
+#footer-section-info-social-media a[href="https://www.facebook.com/"]:hover {
+    background-color:  #3B5998;
+    color:#ffffff;
+}
+
+#footer-section-info-social-media a[href="https://www.google.com/"]:hover {
+    background-color: #DB4A39;
+    color:#ffffff;
+}
+
+#footer-section-info-social-media a[href="https://es.linkedin.com/"]:hover {
+    background-color: #0E76A8;
+    color:#ffffff;
+}
+
+#footer-section-info-social-media a[href="https://twitter.com/"]:hover {
+    background-color: #00ACEE;
+    color:#ffffff;
+}
+
+#footer-section-info-social-media a[href="https://vk.com/"]:hover {
+    background-color: #4E658E;
+    color:#ffffff;
+}
+
+.fa-brands {
+    width: 1.4em;
+}
+
+/*
+Assign a width of 100%, remove the border, adjust the box model to include the padding and border in the width
+and height of the element, apply a padding of 0.5em, a margin of 0.5em,
+a background color #829DA2 and a solid border of 0.1em of the same color.
+*/
+.full-width-input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: #829DA2;
+    border: 0.1em solid #829DA2;
+}
+
+.full-width-input::placeholder {
+    color: #e4e4e4
+}
+
+/*
+Assign a width of 100%, remove the border, adjust the box model to include the padding and border in the width
+and height of the element, apply a padding of 0.5em, a margin of 0.5em,
+a background color #e4e4e4 and a solid border of 0.1em of #829DA2 color.
+*/
+.full-width-submit {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: #e4e4e4;
+    border: 0.1em solid #829DA2;
+}
+
+/*
+Changes the text color to light gray, the background color to dark gray and the border to a solid 0.1em light gray when hovered over.
+*/
+.full-width-submit:hover {
+    color: #C1C2C4;
+    background-color: #323639;
+    border: 0.1em solid #C1C2C4;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/*
+It visually hides the form labels by positioning it absolutely outside the viewing area,
+while still being detectable by assistive technologies such as screen readers.
+*/
+.hidden-label {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*
+It sets as a grid with gaps of 0.35em and 0.6em between rows and columns respectively,
+and creates three columns of equal size; in addition, for all images, it sets the width to 100%,
+the height to 97%, rounds the corners with a radius of 0.5em and adds a transition to all properties
+with a duration of 0.2s and an acceleration effect. The 97% height is set to exactly match the height of the overlay.
+I explain this inside the PDF document.
+*/
+#images-day-gallery-item {
+    display: grid;
+    grid-row-gap: 0.35em;
+    grid-column-gap: 0.6em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#images-day-gallery-item img {
+    width: 100%;
+    height: 97%;
+    border-radius: 0.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+/*
+Assigns a relative position, when you hover the cursor over the elements, the image size increases and the overlay appears.
+*/
+.images-day-gallery-item-img {
+    position: relative;
+}
+
+.images-day-gallery-item-img:hover img {
+    transform: scale(1.05);
+}
+
+.images-day-gallery-item-img:hover .img-overlay {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.images-day-gallery-item-img:hover .img-overlay i {
+    display: block;
+}
+
+.footer-section-contact {
+    display: flex;
+    padding-bottom: 1em;
+}
+
+.footer-section-contact p {
+    margin: 0;
+}
+
+.footer-section-contact-icon {
+    padding-right: 0.5em;
+    font-size: x-large;
+    color:#829DA2;
+    width: 1.4em;
+    text-align: center;
+}
+
+.footer-section-contact-title {
+    padding-left: 0.5em;
+}
+
+/*
+########## MOBILES AND TABLETS SECTION ##########
+*/
+/*
+What follows this media query will affect screens with a minimum width of 768px and a maximum width of 993px, i.e. tablets.
+*/
+@media screen and (min-width: 768px) and (max-width: 993px) {
+
+    /*
+    Adjusts the size so that the tablet emulator does not protrude the shading below the image.
+    */
+    .img-overlay {
+        height: 98%;
+    }
+
+    .footer-section {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /*
+    Allows a base width equal to half the container minus 2em, providing a responsive structure.
+    This way, we get two elements per row in the tablet version.
+    */
+    .footer-section-info {
+        flex: 0 0 calc(50% - 2em);
+    }
+
+    /*
+    Allows a base width equal to half the container minus 1em, providing a responsive structure.
+    This way, we get two elements per row in the tablet version.
+    */
+    .footer-section-contact {
+        flex: 0 0 calc(50% - 1em);
+    }
+
+}
+
+/*
+What follows this media query will affect screens with a maximum width of 768px, i.e. mobiles.
+*/
+@media screen and (max-width: 768px) {
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /*
+    Adjusts the size so that the mobile emulator does not protrude the shading below the image.
+    */
+    .img-overlay {
+        height: 98%;
+    }
+
+    /*
+    Hides unordered lists within the menu and, if they become visible and are a flex container,
+    the list items will be displayed as a column.
+    */
+    .red-button ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .red-button li a {
+        margin: 0;
+        padding: 0.75em 8em;
+    }
+
+    /*
+    In short, it converts the menu item into a flexible container and shifts all its internal elements to the right.
+    */
+    #menu .menu-collapsed {
+        display: flex;
+        justify-content: right;
+    }
+
+    /*
+    Makes an unordered list immediately following the collapsed menu visible when the #bars element is checked or selected.
+    This is a common technique used to create hamburgers in a user interface.
+    */
+    #menu #bars:checked + .menu-collapsed + ul {
+        display: block;
+    }
+
+    .full-width-banner {
+        height: 18em;
+    }
+
+    .full-width-subbanner {
+        height: 6em;
+    }
+
+    #subbanner {
+        padding-top: 0em;
+    }
+
+    /*
+    It applies to the div elements a flexible behavior in column direction,
+    which means that its elements will be arranged vertically.
+    */
+    .footer-section {
+        flex-direction: column;
+    }
+
+}

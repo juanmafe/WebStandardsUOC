@@ -1,0 +1,161 @@
+/*
+These properties affects to the body tag and set the background color to #0160ce and keep the content centered.
+In this case, it affects the page-container div which is the child element of the body.
+*/
+body {
+    background-color: #0160ce;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+These properties affect the footer tag and set the background color to #2f00bc,
+white font color, left align font size 16 and 2% padding.
+*/
+footer {
+    background-color: #2f00bc;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    padding: 2%;
+}
+
+/*
+These properties affect the image element in header tag and set the font color to white,
+A width of 60% and padding on the left, top and bottom.
+*/
+header img {
+    color: white;
+    width: 60%;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 6%;
+}
+
+/*
+These properties affect the image element in header tag and set the font color to #f7e7af.
+*/
+a {
+    color: #f7e7af;
+}
+
+/*
+These properties affect the image element in the header tag and set the font color to #f7e7af
+when the mouse hovers over the link.
+*/
+a:hover {
+    color: #ffffff;
+}
+
+/*
+These properties affect the elements containing the page-continer style (in this case only the main div inside the body),
+which sets a width of 1100px, the background white and the shadow as close as I could imitate from the png image.
+*/
+.page-container {
+    background-color: white;
+    width: 1100px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
+}
+
+/*
+These properties affect the elements containing the headline-section style (in this case only the headline div),
+which is set to black, the font Atomic Age and a size of 22 (values approximating the png image).
+*/
+.headline-section {
+    color: rgb(0, 0, 0);
+    font-family: 'Atomic Age';
+    font-size: 22px;
+}
+
+/*
+These properties affect the elements containing the img-section style (in this case only the image div),
+which is set to #0160ce, the font Roboto and a padding of 3% (values approximating the png image).
+*/
+.img-section {
+    color: #0160ce;
+    font-family: 'Roboto';
+    padding: 3%;
+}
+
+/*
+These properties affect the img elements containing the img-section style (in this case only the image inside of image div),
+which set a centered position.
+*/
+.img-section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/*
+These properties affect the p elements containing the div-section style (in this case the generic text blocks),
+which set a black color, a Roboto font and a font size of 16px (values approximating the png image).
+*/
+.div-section p {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+/*
+These properties affect the p elements containing the quote-section style (in this case only the quote div),
+which set a #0160ce color, a Roboto font, a font size of 16px and a centered position (values approximating the png image).
+*/
+.quote-section p {
+    color: #0160ce;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+}
+
+/*
+The following styles modify only the elements that contain that ID, in this case they are set
+with a left padding (values approximating the png image).
+*/
+#release-url {
+    padding-left: 5%;
+}
+
+#quote-text {
+    padding-left: 2%;
+}
+
+#quote-citation {
+    padding-left: 5%;
+}
+
+/*
+The following styles modify only the elements that contain the margin style, in this case they are set
+with a left and right margin (values approximating the png image).
+*/
+.global-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.img-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.quote-margin {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*
+The following styles modify only the elements that contain the separator style,
+in this case they are divs (horizontal lines) with padding (to give it thickness)
+and if necessary a margin top in negative to overlap with the text.
+*/
+.header-separator {
+    border: 2px solid #2f00bc;
+    margin-top: -2%;
+}
+
+.quote-separator {
+    border: 1px solid #0160ce;
+}

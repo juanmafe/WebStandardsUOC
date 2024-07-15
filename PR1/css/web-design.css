@@ -1,0 +1,271 @@
+/*
+########## COMMONS WEB DESIGN ###########
+*/
+/*
+Affect the h1 tag and sets an extra font size.
+*/
+h1 {
+    font-size: 40px;
+}
+
+/*
+It sets up a flexible container that has a clearance at the top of 3em, and at the bottom of 2em.
+*/
+#webdesign-content {
+    padding-top: 3em;
+    padding-bottom: 2em;
+    display: flex;
+}
+
+/*
+A thin, light gray separator, with a space to the left and to the right of 1em.
+*/
+#webdesign-separator {
+    width: 0.1em;
+    background-color: #e4e4e4;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*
+########## CONTENT SECTION ###########
+*/
+#webdesign-content-section {
+    width: 80%;
+}
+
+/*
+Sets the image to the right, with a 1em margin down and to the left.
+In addition, it will be displayed with a width of 25rem,
+an automatic height and a partially transparent black box shadow.
+*/
+#webdesign-content-introduction-image {
+    float: right;
+    margin: 0em 0em 1em 1em;
+}
+
+#webdesign-content-introduction-image img {
+    width: 25rem;
+    height: auto;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+}
+
+#webdesign-content-introduction-image figcaption {
+    text-align: right;
+}
+
+#webdesign-content-quote {
+    margin: 3em;
+}
+
+/*
+It sets the quote to have a light-colored background, a thick, solid dark red line on the left edge,
+displays as a flexible container, and aligns its child elements vertically in the center.
+*/
+#webdesign-quote {
+    background-color: #fff6f5;
+    border-left: thick solid #C43721;
+    display: flex;
+    align-items: center;
+}
+
+#webdesign-quote-symbol {
+    font-size: 5em;
+}
+
+#webdesign-quote-text {
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/*
+Specifies that for the unordered list no style should be shown.
+Additionally, in list items, the Font Awesome icon is inserted before the text, with a right margin of 0.5em.
+*/
+#webdesign-list ul {
+    list-style-type: none; 
+}
+
+#webdesign-list ul li::before {
+   content: "\f0eb";
+   font-family: 'Font Awesome 6 Free';
+   margin-right: 0.5em;
+}
+
+/*
+########## COMMENTS SECTION ###########
+*/
+#webdesign-comments {
+    padding-top: 2em;
+}
+
+.webdesign-comment {
+    background-color: #e4e4e4;
+    padding: 1em 1em 2em 1em;
+    margin: 1em;
+}
+
+/*
+Comments should be flexibly displayed and evenly distributed
+along the horizontal axis, with equal spacing between them.
+*/
+.webdesign-comment-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.webdesign-comment-head p {
+    margin: 0;
+}
+
+.webdesign-comment-head .fa-solid {
+    font-size: larger;
+    padding: 0.5em;
+    border: 0.1em solid #000000;
+    margin: 0;
+}
+
+.webdesign-comment-head-title-date {
+    font-size: 14px;
+}
+
+.webdesign-comment-head-title-name-italic {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.webdesign-comment-body {
+    margin: 1em;
+}
+
+/*
+########## FORM SECTION ###########
+*/
+#webdesign-form {
+    padding-top: 2em;
+}
+
+.webdesign-form-row {
+    display: flex;
+}
+
+.webdesign-form-input {
+    margin: 0.5em;
+    flex: 1;
+}
+
+/*
+Defines that the input, select and textarea elements will have a 1em padding,
+a 0.1em solid black border, a white background color,
+will occupy the space up to the input border at 100% width; when in focus,
+the border color will change to red.
+*/
+.webdesign-form-input input, .webdesign-form-input select, .webdesign-form-input textarea {
+    padding: 1em;
+    border: 0.1em solid #000000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.webdesign-form-input input:focus, .webdesign-form-input select:focus, .webdesign-form-input textarea:focus {
+    border: 0.1em solid #ff0000;
+}
+
+.webdesign-form-input textarea {
+    padding-bottom: 20em;
+}
+
+#webdesign-form-input-submit:hover {
+    color: #ffffff;
+    background-color: #189232;
+    border: 0.1em solid #189232;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#webdesign-form-input-reset:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 0.1em solid #ff0000;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/*
+########## MORE SECTION ###########
+*/
+#webdesign-more-section {
+    width: 20%;
+}
+
+/*
+The side buttons will have a font size of 14px, light gray text color,
+background color almost black, will be an inline block with a specific padding,
+margin and border radius determined, no text decoration and all its propertieswill change smoothly within 0.3 seconds when modified.
+*/
+.explore-button {
+    font-size: 14px;
+    color: #e4e4e4;
+    background-color: #323639;
+    display: inline-block;
+    padding: 0.75em 1.75em;
+    margin: 0.4em;
+    border-radius: 0.45em;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.explore-button:hover, .explore-button:focus {
+    background-color: #C43721;
+}
+
+/*
+########## MOBILES AND TABLETS SECTION ##########
+*/
+/*
+What follows this media query will affect screens with a maximum width of 768px, i.e. mobiles.
+*/
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /*
+    We reset the width of both sections to 100%.
+    */
+    #webdesign-content-section, #webdesign-more-section {
+        width: 100%;
+    }
+
+    /*
+    Makes the separator invisible
+    */
+    #webdesign-content-separator {
+        display: none;
+    }
+
+    /*
+    Display as a block box, which means that it occupies the entire line and consecutive divs are displayed on new lines.
+    */
+    #webdesign-content{
+        display: block;
+    }
+
+    /*
+    Position flexibly and without any margin to the left or below.
+    In addition, any image within this element will occupy 100% of the width.
+    */
+    #webdesign-content-introduction-image {
+        margin-left: 0em;
+        margin-bottom: 0em;
+    }
+
+    #webdesign-content-introduction-image img {
+        width: 100%;
+    }
+
+}

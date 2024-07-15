@@ -1,0 +1,334 @@
+/*
+These properties affects to the body tag and set the background color to #EBEBFF and keep the content centered.
+In this case, it affects the container div which is the child element of the body.
+*/
+body {
+    background-color: #FCFFFF;
+    justify-content: center;
+}
+
+/*
+These properties affect the elements containing the page-continer style (in this case only the main div inside the body),
+which sets a width of 1200px, an auto margin and Open Sans font family as default.
+*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: Open Sans;
+}
+
+/*
+These properties affect the h1 and h2 tag and sets an extra font size.
+*/
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+/*
+Removes header margins.
+*/
+header {
+    margin-top: -1%;
+    margin-bottom: -1%;
+}
+
+/*
+Apply padding to the sides of the navigation menu.
+*/
+nav {
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+/*
+Keeps menu items aligned to the center and responsive using flexbox.
+*/
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+Sets the list spacing, removes decorator dots from list items and sets font sizes.
+*/
+nav li {
+    padding-right: 2em;
+    padding-left: 2em;
+    list-style-type: none;
+    font-size: larger;
+}
+
+nav a {
+    color: #653a92;
+    text-decoration: none;
+}
+
+/*
+Draws a top border in main menu. 
+*/
+nav a:hover {
+    border-top: 2px solid #653a92;
+}
+
+/*
+It gives a size to the menu image.
+*/
+nav img {
+    width: 4em;
+}
+
+/*
+The background image is set to a size of 30 em, with the size set to
+cover so that it appears at full size if the web is resized.
+The rest of the parameters are used so that the elements inside
+the banner are centered and responsive.
+*/
+#banner {
+    background-image: url("../img/baner.jpg");
+    height: 30em;
+    object-fit: fill;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    flex-direction: column;
+}
+
+/*
+Set a padding similar to the image, a similar font size,
+align the text to the center of the button, without border
+and with minimally rounded corners.
+*/
+#banner a {
+    padding: 1em;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 0.25em;
+    text-decoration: none;
+}
+
+/*
+It is set that when the mouse hovers over it, the color of the text is changed
+and the svg is filled with white color and the background becomes black.
+*/
+#banner a:hover{
+    fill: #ffffff;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.section-introduction {
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+/*
+The general properties are set, with the background color set, alignment of elements, etc.
+*/
+#destinies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 2em;
+}
+
+/*
+The grid of the container is defined, having two types: one of 50% and one of 25%.
+With the help of the grid-template-columns and the spans of the grid-columns, the total is computed:
+First row: 6 + 3 + 3 = 12.
+Second row: 3 + 3 + 6 = 12.
+*/
+#destinies-flex-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.destinies-box50 {
+    grid-column: span 6;
+}
+
+.destinies-box25 {
+    grid-column: span 3;
+}
+
+/*
+Define the generic properties of each particular box, shadows, rounded edges, etc.
+*/
+.destinies-box {
+    background-color: #F5F5F5;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+    border-radius: 4%;
+}
+
+/*
+Define the properties of the images inside the boxes,
+their position inside the div that contains them, their size and the fit so that
+all have the same height.
+*/
+.destinies-image-box {
+    position: relative;
+}
+
+.destinies-image-box img {
+    width: 80%;
+    height: 20em;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+/*
+Define the properties of the prompt (the semi-transparent black box above the images).
+Here we define the white font color, the semi-transparent background color,
+a white border around it and thanks to the properties of top, left and transformation,
+we move all the vectors of this div from the bottom right corner to the center.
+*/
+.destinies-image-prompt {
+    color: #ffffff;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.destinies-image-prompt svg {
+    fill: #ffffff;
+}
+
+.destinies-text-box {
+    margin-top: -0.8em;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+}
+
+.destinies-box-alert {
+    color: #ff0000;
+    margin: -0.5em;
+}
+
+.destinies-box-information {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #ffffff;
+}
+
+/*
+The general properties are set, with the background color set, alignment of elements, etc.
+*/
+#experiences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F4C284;
+    padding-top: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 2em;
+}
+
+/*
+Properties are applied that allow the 3 images of the experiences
+section to be arranged in a natural way and distributed to the width
+of the entire web page and allow them to be reorganized according to the width of the same.
+*/
+#experiences-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*
+Properties for the blocks of the experience section.
+*/
+.experience-item {
+    flex: 20%;
+    margin: 1em;
+    text-align: center;
+}
+
+/*
+The caption images are told to adapt to 100% of the div in which they are contained
+(which is already distributed by the experiences-flex-container properties) and a border
+radius of 50% is added to give the effect to the 3 pictures (except for the middle picture
+that will have a specific attribute below).
+*/
+.experience-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.experience-item figcaption {
+    font-family: Allura;
+    font-size: x-large;
+    color: #7A1600;
+}
+
+/*
+Specific attributes to maintain the culture image warping to match the width of the page at all times
+(as a circle).
+*/
+#experience-culture-item img {
+    width: 20vh;
+    height: 20vh;
+}
+
+/*
+Properties are applied that allow the 3 columns of the contact
+section to be arranged in a natural way and distributed to the width
+of the entire web page and allow them to be reorganized according to the width of the same.
+*/
+#contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    font-style: italic;
+}
+
+.contact-title {
+    font-family: Allura;
+    font-size: x-large;
+    color: #7A1600;
+}
+
+/*
+Paint the logos in svg in blue color.
+*/
+.contact-social-blue a {
+    fill: #0000ee;
+}
+
+/*
+Paint the logos in svg in purple color.
+*/
+.contact-social-purple a {
+    fill: #561d8b;
+}
+
+/*
+It is set that when the mouse hovers over it, the color of the text is changed
+and the svg is filled with white color and the background becomes black.
+*/
+#contac-social a:hover{
+    fill: #0000ee;
+}
