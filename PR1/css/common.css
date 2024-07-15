@@ -208,7 +208,7 @@ Transforms the banner container into a container with a fixed height that displa
 the entire area of the container, and any internal elements will be centered horizontally.
 */
 .full-width-banner {
-    background-image: url('../img/common/header.jpg');
+    background-image: url('PR1/img/common/header.jpg');
     height: 30em;
     background-repeat: no-repeat;
     background-size: cover;
