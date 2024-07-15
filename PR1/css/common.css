@@ -208,7 +208,7 @@ Transforms the banner container into a container with a fixed height that displa
 the entire area of the container, and any internal elements will be centered horizontally.
 */
 .full-width-banner {
-    background-image: url('/img/common/header.jpg');
+    background-image: url('img/common/header.jpg');
     height: 30em;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +236,7 @@ Transforms the subbanner container into a container with a fixed height that dis
 the entire area of the container, and any internal elements will be centered horizontally.
 */
 .full-width-subbanner {
-    background-image: url('../img/common/inner_header.jpg');
+    background-image: url('img/common/inner_header.jpg');
     height: 10em;
     background-repeat: no-repeat;
     background-size: cover;
