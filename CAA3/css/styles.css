@@ -89,7 +89,7 @@ The rest of the parameters are used so that the elements inside
 the banner are centered and responsive.
 */
 #banner {
-    background-image: url("../img/baner.jpg");
+    background-image: url("https://raw.githubusercontent.com/juanmafe/WebStandardsUOC/main/CAA3/img/banner.jpg");
     height: 30em;
     object-fit: fill;
     background-size: cover;
